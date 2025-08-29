@@ -10,8 +10,8 @@ export default function BlogPage() {
     const currentPosts = allPosts.slice(0, POSTS_PER_PAGE);
 
     return (
-        <section className="container mx-auto px-4 py-16">
-            <h1 className="text-center mb-12">Blog</h1>
+        <section className="container mx-auto px-4 py-4">
+            <h1 className="text-center">Blog</h1>
             <ul className="space-y-6 max-w-2xl mx-auto">
                 {currentPosts.map(({slug, date, title, tags}) => (
                     <li key={slug} className="border-b border-border pb-4">
@@ -33,7 +33,7 @@ export default function BlogPage() {
 
                             <small className="text-text-subtle block mt-2">
                                 <time dateTime={date.toISOString()}>
-                                    {format(date, 'yyyy-MM-dd hh:mm:ss')}
+                                    {format(date, 'yyyy-MM-dd H:mm:ss')}
                                 </time>
                             </small>
                         </Link>

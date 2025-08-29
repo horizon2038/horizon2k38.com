@@ -32,11 +32,11 @@ export default async function Post({params}: {params: Promise<{slug: string[]}>}
     const date = new Date(postData.date);
 
     return (
-        <article className="prose lg:prose-xl mx-auto py-16 px-4">
+        <article className="prose lg:prose-xl mx-auto py-4 px-4">
             <h1>{postData.title}</h1>
             <div className="text-gray-500 mb-8">
                 <time dateTime={postData.date.toDateString()}>
-                    {format(postData.date, 'yyyy-MM-dd HH:mm:ss')}
+                    {format(postData.date, 'yyyy-MM-dd H:mm:ss')}
                 </time>
             </div>
 

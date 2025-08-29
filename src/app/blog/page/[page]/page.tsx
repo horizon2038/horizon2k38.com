@@ -39,7 +39,7 @@ export default async function BlogPaginatedPage({params}: {params: Promise<{page
         // In a static export, we can't do server-side redirects, so we'll show a message
         // or handle this gracefully
         return (
-            <section className="container mx-auto px-4 py-16">
+            <section className="container mx-auto px-4 py-4">
                 <h1 className="text-4xl font-bold text-center mb-12">Blog</h1>
                 <p className="text-center">
                     This page doesn&apos;t exist. <Link href="/blog" className="text-blue-600 hover:underline">Go back to the blog</Link>.
@@ -53,8 +53,8 @@ export default async function BlogPaginatedPage({params}: {params: Promise<{page
     const currentPosts = allPosts.slice(startIndex, endIndex);
 
     return (
-        <section className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-center mb-12">Blog</h1>
+        <section className="container mx-auto px-4 py-4">
+            <h1 className="text-center">Blog</h1>
             <ul className="space-y-6 max-w-2xl mx-auto">
                 {currentPosts.map(({slug, date, title, tags}) => (
                     <li key={slug} className="border-b border-border pb-4">
@@ -74,7 +74,7 @@ export default async function BlogPaginatedPage({params}: {params: Promise<{page
                             )}
                             <small className="text-text-subtle block mt-2">
                                 <time dateTime={date.toISOString()}>
-                                    {format(date, 'yyyy-MM-dd hh:mm:ss')}
+                                    {format(date, 'yyyy-MM-dd H:mm:ss')}
                                 </time>
                             </small>
                         </Link>
