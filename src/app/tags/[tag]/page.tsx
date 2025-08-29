@@ -18,8 +18,8 @@ export function generateStaticParams() {
     }));
 }
 
-export default async function TagPage({params}: {params: Promise<{raw_tag: string}>}) {
-    const {raw_tag} = await params;
+export default async function TagPage({params}: {params: Promise<{tag: string}>}) {
+    const {tag: raw_tag} = await params;
     const tag = decodeURIComponent(raw_tag);
     const posts = getPostsByTag(tag);
 
