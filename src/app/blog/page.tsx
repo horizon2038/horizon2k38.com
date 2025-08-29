@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {getSortedPostsData, POSTS_PER_PAGE} from '@/lib/posts';
 import {format} from 'date-fns';
 import {Pagination} from '@/components/ui/Pagination';
+import {TagList} from '@/components/blog/TagList';
 
 export default function BlogPage() {
     const allPosts = getSortedPostsData();
@@ -12,6 +13,9 @@ export default function BlogPage() {
     return (
         <section className="container mx-auto px-4 py-4">
             <h1 className="text-center">Blog</h1>
+            
+            <TagList />
+            
             <div className="space-y-6 max-w-2xl mx-auto">
                 {currentPosts.map(({slug, date, title, tags}) => (
                     <div key={slug} className="neu-surface neu-pressable pb-4">
