@@ -24,14 +24,14 @@ export default async function TagPage({params}: {params: Promise<{tag: string}>}
     const posts = getPostsByTag(tag);
 
     return (
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-4">
             <h1 className="text-4xl font-bold text-center mb-12">
                 Tag: <span className="text-secondary">#{tag}</span>
             </h1>
-            <ul className="space-y-6 max-w-2xl mx-auto">
+            <div className="space-y-6 max-w-2xl mx-auto">
                 {posts.map(({slug, date, title}) => (
-                    <li key={slug} className="border-b pb-4">
-                        <Link href={`/blog/${slug}`} className="block">
+                    <div key={slug} className="border-b pb-4">
+                        <Link href={`/blog/${slug}`} className="block no-underline text-text-default/60">
                             <h2 className="text-2xl font-semibold text-text-default hover:underline">{title}</h2>
                             <small className="text-text-subtle">
                                 <time dateTime={date.toDateString()}>
@@ -39,9 +39,9 @@ export default async function TagPage({params}: {params: Promise<{tag: string}>}
                                 </time>
                             </small>
                         </Link>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </section>
     );
 }

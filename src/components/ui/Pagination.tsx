@@ -16,8 +16,8 @@ export function Pagination({currentPage, totalPages}: Props) {
                 href={currentPage > 2 ? `/blog/page/${currentPage - 1}` : '/blog'}
                 className={
                     currentPage === 1
-                        ? 'pointer-events-none'
-                        : 'hover:text-primary'
+                        ? 'pointer-events-none no-underline'
+                        : 'hover:text-primary no-underline'
                 }
                 aria-disabled={currentPage === 1}
             >
@@ -27,29 +27,29 @@ export function Pagination({currentPage, totalPages}: Props) {
             </Link>
 
             { /* page numbers */}
-            <ul className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
                 {pages.map((page) => (
-                    <li key={page}>
+                    <div key={page}>
                         <Link
                             href={page === 1 ? '/blog' : `/blog/page/${page}`}
-                            className={`px-3 py-1 rounded-md transition-colors ${currentPage === page
-                                ? 'bg-primary text-primary-foreground pointer-events-none'
+                            className={`neu-surface neu-inset px-3 py-1 transition-colors ${currentPage === page
+                                ? 'bg-primary text-text-default pointer-events-none'
                                 : 'hover:bg-base/50'
-                                }`}
+                                } no-underline`}
                         >
                             {page}
                         </Link>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
 
             {/* link to next */}
             <Link
                 href={`/blog/page/${currentPage + 1}`}
                 className={
                     currentPage === totalPages
-                        ? 'pointer-events-none text-text-subtle'
-                        : 'hover:text-primary'
+                        ? 'pointer-events-none text-text-subtle no-underline'
+                        : 'hover:text-primary no-underline'
                 }
                 aria-disabled={currentPage === totalPages}
             >

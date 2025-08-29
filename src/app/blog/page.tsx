@@ -12,10 +12,10 @@ export default function BlogPage() {
     return (
         <section className="container mx-auto px-4 py-4">
             <h1 className="text-center">Blog</h1>
-            <ul className="space-y-6 max-w-2xl mx-auto">
+            <div className="space-y-6 max-w-2xl mx-auto">
                 {currentPosts.map(({slug, date, title, tags}) => (
-                    <li key={slug} className="border-b border-border pb-4">
-                        <Link href={`/blog/${slug}`} className="block group">
+                    <div key={slug} className="neu-surface neu-pressable pb-4">
+                        <Link href={`/blog/${slug}`} className="block group no-underline px-6 py-2">
                             <h2 className="text-2xl font-semibold text-text-default group-hover:underline group-hover:text-secondary">{title}</h2>
 
                             {tags && tags.length > 0 && (
@@ -31,15 +31,15 @@ export default function BlogPage() {
                                 </div>
                             )}
 
-                            <small className="text-text-subtle block mt-2">
+                            <small className="text-text-default/60 block mt-2">
                                 <time dateTime={date.toISOString()}>
                                     {format(date, 'yyyy-MM-dd H:mm:ss')}
                                 </time>
                             </small>
                         </Link>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
             <Pagination currentPage={1} totalPages={totalPages} />
         </section >
     );

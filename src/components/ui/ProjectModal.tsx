@@ -72,7 +72,7 @@ export function ProjectModal({project, onClose}: Props) {
                 <div className="flex gap-4 mt-8">
                     {project.demoLink && (
                         <Button variant="primary" size="sm">
-                            <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                            <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="no-underline">
                                 See Demo
                             </a>
                         </Button>
