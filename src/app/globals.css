@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-@import url("https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap');
-
 :root {
   --background: #141414;
   --foreground: #171717;
@@ -69,22 +66,22 @@
     margin: 1rem 0;
     border-radius: 0.75rem;
     background: transparent;
+    width: 100%;
+    max-width: calc(100vw - 2rem);
   }
 
   .prose pre>code {
-    display: inline-block;
-    width: max-content;
-    min-width: 100%;
+    display: block;
     white-space: pre;
     word-break: normal;
     overflow-wrap: normal;
     padding: 1rem;
+    min-width: max-content;
   }
 
   .prose pre>code.hljs {
     background: transparent !important;
     padding: 0 !important;
-    overflow-x: visible !important;
   }
 }
 
