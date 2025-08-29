@@ -8,6 +8,9 @@ type Params = {
     };
 };
 
+export const dynamicParams = false;
+export const dynamic = 'error';
+
 export function generateStaticParams() {
     const tags = getAllTags();
     return tags.map((tag) => ({
@@ -15,8 +18,9 @@ export function generateStaticParams() {
     }));
 }
 
-export default function TagPage({params}: Params) {
-    const tag = decodeURIComponent(params.tag);
+export default async function TagPage({params}: {params: Promise<{raw_tag: string}>}) {
+    const {raw_tag} = await params;
+    const tag = decodeURIComponent(raw_tag);
     const posts = getPostsByTag(tag);
 
     return (

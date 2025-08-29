@@ -10,6 +10,9 @@ type Params = {
     };
 };
 
+export const dynamicParams = false;
+export const dynamic = 'force-static';
+
 export function generateStaticParams() {
     const posts = getSortedPostsData();
     return posts.map((post) => ({
@@ -17,7 +20,7 @@ export function generateStaticParams() {
     }));
 }
 
-export default async function Post({params}: Params) {
+export default async function Post({params}: {params: Promise<{slug: string[]}>}) {
     const {slug} = await params;
     const joined = slug.join('/');
 

@@ -129,7 +129,7 @@ export default function AboutPage() {
                     My main interests lie in <i>Microkernel</i> and <i>Hypervisor</i>.</p>
                 <h2>Personal Information</h2>
                 <ul>
-                    <li>Name: Rekka "horizon" IGUMI (Japanese: <i>伊組烈火</i>)</li>
+                    <li>Name: Rekka &quot;horizon&quot; IGUMI (Japanese: <i>伊組烈火</i>)</li>
                     <li>Date of Birth: 2005-07-28</li>
                     <li>Residence: Tokyo, Japan </li>
                 </ul>
@@ -212,27 +212,27 @@ export default function AboutPage() {
                 <h2>Awards</h2>
                 <ul>
                     <li>
-                        2023-05: <a href="https://jr.mitou.org/projects/2023/a9n">'23 MITOU Jr Creator</a>
+                        2023-05: <a href="https://jr.mitou.org/projects/2023/a9n">&apos;23 MITOU Jr Creator</a>
                         <ul>
                             <li><i>A9N - A Microkernel Achieving Portability Using HAL</i></li>
                             <li>The presentation video is available <a href="https://youtu.be/VJOOFltOJJk?si=LBfk2IhD_jKtejJa">here</a></li>
                         </ul>
                     </li>
                     <li>
-                        2023-12: <a href="https://jr.mitou.org/projects/2023">'23 MITOU Jr Super-Creator</a>
+                        2023-12: <a href="https://jr.mitou.org/projects/2023">&apos;23 MITOU Jr Super-Creator</a>
                         <ul>
                             <li><a href="https://prtimes.jp/main/html/rd/p/000000014.000022934.html">Press Release</a></li>
                         </ul>
                     </li>
                     <li>
-                        2024-06: <a href="https://www.ipa.go.jp/jinzai/mitou/it/2024/gaiyou-sg-2.html">'24 MITOU IT Creator</a>
+                        2024-06: <a href="https://www.ipa.go.jp/jinzai/mitou/it/2024/gaiyou-sg-2.html">&apos;24 MITOU IT Creator</a>
                         <ul>
                             <li><i>Secure User-Level Memory Management System with a Capability-Based Microkernel</i></li>
                             <li>The presentation video is available <a href="https://youtu.be/YG5ikc-X_Kg?si=bVjdbYTw5z3Zx7Pl">here</a></li>
                         </ul>
                     </li>
                     <li>
-                        2025-05: <a href="https://www.ipa.go.jp/jinzai/mitou/koubo/career/2024/2024-supercreator-14.html">'24 MITOU IT Super-Creator</a>
+                        2025-05: <a href="https://www.ipa.go.jp/jinzai/mitou/koubo/career/2024/2024-supercreator-14.html">&apos;24 MITOU IT Super-Creator</a>
                         <ul>
                             <li><a href="https://www.meti.go.jp/press/2025/05/20250529001/20250529001.html">Press Release</a></li>
                         </ul>

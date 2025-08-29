@@ -9,19 +9,21 @@ type Params = {
     };
 };
 
+export const dynamicParams = false;
+export const dynamic = 'force-static';
+
 export function generateStaticParams() {
     const allPosts = getSortedPostsData();
     const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
-    const paths = Array.from({length: totalPages}, (_, i) => ({
-        page: (i + 1).toString(),
-    }));
 
-    return paths.filter(path => path.page !== '1');
+    return Array.from({length: totalPages}, (_, i) => ({page: String(i + 1)}))
+        .filter(p => p.page !== '1');
 }
 
-export default function BlogPaginatedPage({params}: Params) {
+export default async function BlogPaginatedPage({params}: {params: Promise<{page: string}>}) {
+    const {page} = await params;
     const allPosts = getSortedPostsData();
-    const currentPage = parseInt(params.page, 10);
+    const currentPage = parseInt(page, 10);
     const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
 
     const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
