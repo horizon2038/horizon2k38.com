@@ -1,15 +1,30 @@
 @import "tailwindcss";
 
+@import url("https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap');
+
 :root {
-  --background: #ffffff;
+  --background: #141414;
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-base: #141414;
+  --color-primary: #2E3238;
+  --color-secondary: #93DEFF;
+  --color-text-default: #EEEEEE;
+  --color-text-secondary: #A0A0A0;
+
+  /* neumorphism colors */
+  --neu-highlight-rgb: 255 255 255;
+  --neu-shadow-rgb: 0 0 0;
+  --neu-radius: 0.75rem;
+  --ease-soft: cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +34,96 @@
   }
 }
 
+@layer components {
+  h1 {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-weight-semibold);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-semibold);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.5rem;
+  }
+
+  .prose pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    margin: 1rem 0;
+    border-radius: 0.75rem;
+    background: transparent;
+  }
+
+  .prose pre>code {
+    display: inline-block;
+    width: max-content;
+    min-width: 100%;
+    white-space: pre;
+    word-break: normal;
+    overflow-wrap: normal;
+    padding: 1rem;
+  }
+
+  .prose pre>code.hljs {
+    background: transparent !important;
+    padding: 0 !important;
+    overflow-x: visible !important;
+  }
+}
+
+@layer utilities {
+  .neu-surface {
+    background: var(--color-base);
+    border-radius: var(--neu-radius);
+    box-shadow:
+      -6px -6px 12px rgb(var(--neu-highlight-rgb) / 0.04),
+      6px 6px 16px rgb(var(--neu-shadow-rgb) / 0.4);
+  }
+
+  .neu-inset {
+    background: var(--color-base);
+    border-radius: var(--neu-radius);
+    box-shadow:
+      inset -3px -3px 6px rgb(var(--neu-highlight-rgb) / 0.04),
+      inset 3px 3px 8px rgb(var(--neu-shadow-rgb) / 0.4);
+  }
+
+  .neu-pressable {
+    transition: transform 150ms var(--ease-soft), box-shadow 160ms var(--ease-soft);
+  }
+
+  .neu-pressable:hover {
+    transform: scale(1.02);
+  }
+
+  .neu-pressable:active {
+    box-shadow:
+      inset -3px -3px 6px rgb(var(--neu-highlight-rgb) / 0.04),
+      inset 3px 3px 8px rgb(var(--neu-shadow-rgb) / 0.4);
+  }
+}
+
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Zen Kaku Gothic New", Hack, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
