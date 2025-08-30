@@ -31,7 +31,7 @@ export default function AboutPage() {
                     <li>2025-04 - Present: Undergraduate Student, <a href="https://www.sfc.keio.ac.jp/">Faculty of Environment and Information Studies, Keio University</a></li>
                     <li>2025-04 - Present: Member, <a href="https://rg.sfc.keio.ac.jp/">SFC-RG</a> VIRT/<a href="https://arch.sfc.wide.ad.jp/">Arch</a> (Kusumoto/Takashio/Van Meter/Uehara/Mitsugi/Nakazawa/Okoshi Joint Research Group)</li>
                 </ul>
-                <h2>Certifiate</h2>
+                <h2>Certificate</h2>
                 <ul>
                     <li>
                         2023-12: <a href="https://jr.mitou.org/projects/2023">&apos;23 MITOU Jr Super-Creator</a>
