@@ -15,7 +15,7 @@ export function TagList() {
                             href={`/tags/${encodeURIComponent(tag)}`}
                             className="group no-underline"
                         >
-                            <div className="neu-surface neu-pressable px-3 py-2 rounded-lg transition-colors hover:bg-secondary/10">
+                            <div className="neu-surface neu-pressable px-3 py-2 rounded-lg">
                                 <span className="text-sm font-medium text-text-default group-hover:text-secondary">
                                     #{tag}
                                 </span>
