@@ -49,7 +49,7 @@ export function ProjectCard({project, onClick}: Props) {
             )}
             <CardContent className="pt-4">
                 <h3 className="text-xl font-semibold text-text-default">{project.title}</h3>
-                <p className="mt-1 text-sm text-text-default/60">{project.category}</p>
+                <p className="mt-1 text-sm text-text-default/60">{project.shortDescription}</p>
             </CardContent>
         </Card>
     );

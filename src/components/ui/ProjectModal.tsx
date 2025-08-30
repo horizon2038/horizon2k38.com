@@ -61,19 +61,13 @@ export function ProjectModal({project, onClose}: Props) {
                 )}
 
                 <h2 className="text-3xl font-bold text-text-default">{project.title}</h2>
-                <p className="text-lg text-text-subtle mt-1 mb-4">{project.category}</p>
+                <p className="text-lg text-text-default/60 mt-1 mb-4">{project.shortDescription}</p>
                 { /* <p className="text-text-default leading-relaxed whitespace-pre-wrap">{project.longDescription}</p> */}
-                <div className="prose psose-sm md:prose-base max-w-none">
-                    <ReactMarkdown rehypePlugins={[rehypRaw]}>
-                        {project.longDescription}
-                    </ReactMarkdown>
-                </div>
-
-                <div className="flex gap-4 mt-8">
+                <div className="flex gap-4">
                     {project.demoLink && (
                         <Button variant="primary" size="sm">
                             <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="no-underline">
-                                See Demo
+                                Project Page
                             </a>
                         </Button>
                     )}
@@ -90,6 +84,11 @@ export function ProjectModal({project, onClose}: Props) {
                     >
                         GitHub
                     </Button>
+                </div>
+                <div className="prose psose-sm md:prose-base max-w-none">
+                    <ReactMarkdown rehypePlugins={[rehypRaw]}>
+                        {project.longDescription}
+                    </ReactMarkdown>
                 </div>
             </div>
         </div>
