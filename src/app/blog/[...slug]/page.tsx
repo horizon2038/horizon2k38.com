@@ -25,18 +25,18 @@ export function generateStaticParams() {
 export async function generateMetadata({params}: {params: Promise<{slug: string[]}>}): Promise<Metadata> {
     const {slug} = await params;
     const joined = slug.join('/');
-    
+
     try {
         const postData = await getPostData(joined);
         const siteUrl = process.env.SITE_URL || 'https://horizon2k38.com';
         const postUrl = `${siteUrl}/blog/${joined}`;
-        
+
         return {
             title: `${postData.title} | horizon2k38`,
-            description: `${postData.title} - horizon2k38のブログ記事`,
+            description: `${postData.title} - Kernel of horizon2k38`,
             openGraph: {
                 title: postData.title,
-                description: `${postData.title} - horizon2k38のブログ記事`,
+                description: `${postData.title} - Kernel of horizon2k38`,
                 url: postUrl,
                 siteName: 'horizon2k38',
                 type: 'article',
@@ -46,7 +46,7 @@ export async function generateMetadata({params}: {params: Promise<{slug: string[
             twitter: {
                 card: 'summary_large_image',
                 title: postData.title,
-                description: `${postData.title} - horizon2k38のブログ記事`,
+                description: `${postData.title} - Kernel of horizon2k38`,
             },
         };
     } catch {
@@ -88,11 +88,11 @@ export default async function Post({params}: {params: Promise<{slug: string[]}>}
             </div>
 
             <div className="" dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
-            
+
             <SocialShare
                 title={postData.title}
                 url={`/blog/${joined}`}
-                description={`${postData.title} - horizon2k38のブログ記事`}
+                description={`${postData.title} - Kernel of horizon2k38`}
             />
         </article>
     );
