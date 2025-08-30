@@ -3,6 +3,7 @@ import {getSortedPostsData, POSTS_PER_PAGE} from '@/lib/posts';
 import {format} from 'date-fns';
 import {Pagination} from '@/components/ui/Pagination';
 import {TagList} from '@/components/blog/TagList';
+import Feed from '@/components/ui/Feed';
 
 export default function BlogPage() {
     const allPosts = getSortedPostsData();
@@ -12,7 +13,14 @@ export default function BlogPage() {
 
     return (
         <section className="container mx-auto px-4 py-4">
-            <h1 className="text-center">Blog</h1>
+            <h1 className="flex justify-center items-center gap-x-4">
+                Blog
+                <span className="neu-surface neu-pressable p-2 inline-block">
+                    <a href="/feed.xml" className="no-underline">
+                        <Feed className="fill-secondary" />
+                    </a>
+                </span>
+            </h1>
             <div className="flex justify-center">
                 <TagList />
             </div>
