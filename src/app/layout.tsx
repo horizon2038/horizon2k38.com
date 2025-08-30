@@ -18,6 +18,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja" suppressHydrationWarning>
+            <head>
+                <link 
+                    rel="alternate" 
+                    type="application/rss+xml" 
+                    title="horizon2k38 Blog RSS Feed" 
+                    href="/feed.xml" 
+                />
+            </head>
             <body suppressHydrationWarning>
                 <Header />
                 <main className="flex flex-col min-h-screen bg-base">{children}</main>
