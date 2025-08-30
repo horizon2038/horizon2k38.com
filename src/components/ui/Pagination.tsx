@@ -32,9 +32,9 @@ export function Pagination({currentPage, totalPages}: Props) {
                     <div key={page}>
                         <Link
                             href={page === 1 ? '/blog' : `/blog/page/${page}`}
-                            className={`neu-surface neu-inset px-3 py-1 transition-colors ${currentPage === page
-                                ? 'bg-primary text-text-default pointer-events-none'
-                                : 'hover:bg-base/50'
+                            className={`neu-surface px-3 py-1 transition-colors ${currentPage === page
+                                ? 'neu-inset text-text-default pointer-events-none'
+                                : 'text-text-default hover:bg-base/50'
                                 } no-underline`}
                         >
                             {page}
