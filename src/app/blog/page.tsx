@@ -28,15 +28,15 @@ export default function BlogPage() {
             <div className="space-y-6 max-w-2xl mx-auto">
                 {currentPosts.map(({slug, date, title, tags}) => (
                     <div key={slug} className="neu-surface neu-pressable pb-4">
-                        <Link href={`/blog/${slug}`} className="block group no-underline px-6 py-2">
-                            <h2 className="text-2xl font-semibold text-text-default group-hover:underline group-hover:text-secondary">{title}</h2>
+                        <Link href={`/blog/${slug}`} className="block group no-underline text-text-default px-6 py-2">
+                            <h2 className="text-2xl font-semibold text-text-default">{title}</h2>
 
                             {tags && tags.length > 0 && (
                                 <div className="mt-3 mb-3 flex flex-wrap gap-2 overflow-hidden">
                                     {tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="bg-text-default/10 text-text-default px-2 py-2 rounded-lg text-xs font-medium"
+                                            className="bg-text-default/10 text-text-default px-3 py-2 rounded-lg text-xs font-medium neu-surface neu-inset"
                                         >
                                             #{tag}
                                         </span>
