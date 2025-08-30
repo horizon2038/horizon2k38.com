@@ -171,7 +171,7 @@ export function Header() {
                                             onClick={() => setOpen(false)}
                                             className={`block w-full rounded-[calc(var(--neu-radius)/1.5)] px-4 py-4 text-base no-underline
                     ${isActive(link.href)
-                                                    ? 'text-text-default font-semibold neu-inset'
+                                                    ? 'text-text-default font-semibold neu-surface neu-inset'
                                                     : 'text-text-default/80 hover:text-text-default neu-surface'
                                                 }
                     transition-colors no-underline`}
