@@ -15,7 +15,7 @@ export default function ProjectsPage() {
 
     return (
         <>
-            <div className="container mx-auto px-4 py-4">
+            <div className="container mx-auto px-4 py-4 max-w-6xl">
                 <h1 className="text-center">
                     Projects
                 </h1>

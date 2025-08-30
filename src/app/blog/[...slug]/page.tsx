@@ -69,7 +69,7 @@ export default async function Post({params}: {params: Promise<{slug: string[]}>}
     const date = new Date(postData.date);
 
     return (
-        <article className="container prose lg:prose-xl mx-auto py-8 px-8">
+        <article className="container prose lg:prose-xl px-4 py-4 max-w-2xl mx-auto">
             <h1>{postData.title}</h1>
             <div className="text-gray-500 mb-8">
                 <time dateTime={postData.date.toDateString()}>

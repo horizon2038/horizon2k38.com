@@ -6,7 +6,7 @@ export default function AboutPage() {
             <h1 className="text-center">
                 About Me
             </h1>
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-2xl mx-auto">
                 <Image
                     src="/images/horizon-real.jpeg"
                     alt="Profile Picture"
@@ -18,7 +18,7 @@ export default function AboutPage() {
                     My main interests lie in <i>Microkernel</i> and <i>Hypervisor</i>.</p>
                 <h2>Personal Information</h2>
                 <ul>
-                    <li>Name: Rekka &quot;horizon&quot; IGUMI (Japanese: <i>伊組烈火</i>)</li>
+                    <li>Name: Rekka &quot;horizon&quot; IGUMI <span className="whitespace-nowrap">(Japanese: <i>伊組烈火</i>)</span></li>
                     <li>Date of Birth: 2005-07-28</li>
                     <li>Residence: Tokyo, Japan </li>
                 </ul>
