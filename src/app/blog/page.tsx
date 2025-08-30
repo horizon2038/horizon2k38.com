@@ -13,9 +13,10 @@ export default function BlogPage() {
     return (
         <section className="container mx-auto px-4 py-4">
             <h1 className="text-center">Blog</h1>
-            
-            <TagList />
-            
+            <div className="flex justify-center">
+                <TagList />
+            </div>
+
             <div className="space-y-6 max-w-2xl mx-auto">
                 {currentPosts.map(({slug, date, title, tags}) => (
                     <div key={slug} className="neu-surface neu-pressable pb-4">
