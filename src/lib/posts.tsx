@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import {remark} from 'remark';
 import {globSync} from 'glob';
 import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
 import rehypeHighlight from 'rehype-highlight';
 
@@ -50,9 +51,10 @@ export async function getPostData(slug: string): Promise<PostData> {
     const matterResult = matter(fileContents);
 
     const processedContent = await remark()
-        .use(remarkRehype)
+        .use(remarkRehype, {allowDangerousHtml: true})
+        .use(rehypeRaw)
         .use(rehypeHighlight)
-        .use(rehypeStringify)
+        .use(rehypeStringify, {allowDangerousHtml: true})
         .process(matterResult.content);
     const contentHtml = processedContent.toString();
 

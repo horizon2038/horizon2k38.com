@@ -87,7 +87,7 @@ export default async function Post({params}: {params: Promise<{slug: string[]}>}
                 ))}
             </div>
 
-            <div className="" dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
+            <div suppressHydrationWarning className="" dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
 
             <SocialShare
                 title={postData.title}
