@@ -1,10 +1,11 @@
 import Image from "next/image";
+import {GitHubIcon, XIcon, MailIcon} from "@/components/ui/Icon";
 
 export default function AboutPage() {
     return (
         <div className="container mx-auto px-4 py-4 text-text-default">
             <h1 className="text-center">
-                About Me
+                About horizon
             </h1>
             <div className="max-w-2xl mx-auto">
                 <Image
@@ -14,6 +15,11 @@ export default function AboutPage() {
                     height={200}
                     className="neu-surface rounded-full mx-auto mb-6"
                 />
+                <div className="flex items-center justify-center text-center mb-6 gap-4 mx-auto">
+                    <a className="text-text-default" href="mailto:horizon@web.sfc.wide.ad.jp"><MailIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
+                    <a className="text-text-default" href="https://github.com/horizon2038"><GitHubIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
+                    <a className="text-text-default" href="https://x.com/horizon2k38"><XIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
+                </div>
                 <p>I am a Japanese software developer with a passion for everything from low-level programming to software architecture.
                     My main interests lie in <i>Microkernel</i> and <i>Hypervisor</i>.</p>
                 <h2>Personal Information</h2>
