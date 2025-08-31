@@ -1,4 +1,29 @@
-import Image from "next/image";
+import type {Metadata} from 'next';
+
+const siteUrl = process.env.SITE_URL || "https://horizon2k38.com";
+const og = `${siteUrl}/opengraph-image.png`;
+
+export const metadata: Metadata = {
+    metadataBase: new URL(siteUrl),
+    title: "Home | horizon2k38",
+    description: "Home - Kernel of horizon2k38",
+    openGraph: {
+        title: "Home | horizon2k38",
+        description: "Home - Kernel of horizon2k38",
+        url: siteUrl,
+        siteName: "Kernel of horizon2k38",
+        type: "website",
+        images: [
+            {url: og, width: 1200, height: 630, alt: "horizon2k38"},
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Home | horizon2k38",
+        description: "Home - Kernel of horizon2k38",
+        images: [og],
+    },
+};
 
 export default function Home() {
     return (

@@ -30,8 +30,10 @@ export async function generateMetadata({params}: {params: Promise<{slug: string[
         const postData = await getPostData(joined);
         const siteUrl = process.env.SITE_URL || 'https://horizon2k38.com';
         const postUrl = `${siteUrl}/blog/${joined}`;
+        const og = `${siteUrl}/opengraph-image.png`;
 
         return {
+            metadataBase: new URL(siteUrl),
             title: `${postData.title} | horizon2k38`,
             description: `${postData.title} - Kernel of horizon2k38`,
             openGraph: {
@@ -42,11 +44,21 @@ export async function generateMetadata({params}: {params: Promise<{slug: string[
                 type: 'article',
                 publishedTime: postData.date.toISOString(),
                 tags: postData.tags,
+                images: [
+                    {
+                        url: og,
+                    },
+                ],
             },
             twitter: {
                 card: 'summary_large_image',
                 title: postData.title,
                 description: `${postData.title} - Kernel of horizon2k38`,
+                images: [
+                    {
+                        url: og,
+                    },
+                ],
             },
         };
     } catch {
