@@ -21,7 +21,9 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Home | horizon2k38",
         description: "Home - Kernel of horizon2k38",
-        images: [og],
+        images: [
+            {url: og, width: 1200, height: 630, alt: "horizon2k38"},
+        ],
     },
 };
 
