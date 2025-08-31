@@ -16,7 +16,7 @@ export default function AboutPage() {
                     className="neu-surface rounded-full mx-auto mb-6"
                 />
                 <div className="flex items-center justify-center text-center mb-6 gap-4 mx-auto">
-                    <a className="text-text-default" href="mailto:horizon@web.sfc.wide.ad.jp"><MailIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
+                    <a className="text-text-default" href="mailto:horizon@sfc.wide.ad.jp"><MailIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
                     <a className="text-text-default" href="https://github.com/horizon2038"><GitHubIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
                     <a className="text-text-default" href="https://x.com/horizon2k38"><XIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
                 </div>
