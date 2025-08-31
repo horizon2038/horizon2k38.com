@@ -19,17 +19,20 @@ export default function RootLayout({
     return (
         <html lang="ja" suppressHydrationWarning>
             <head>
-                <link 
-                    rel="alternate" 
-                    type="application/rss+xml" 
-                    title="horizon2k38 Blog RSS Feed" 
-                    href="/feed.xml" 
+                <link
+                    rel="alternate"
+                    type="application/rss+xml"
+                    title="horizon2k38 Blog RSS Feed"
+                    href="/feed.xml"
                 />
+                <meta name="format-detection" content="telephone=no" />
             </head>
-            <body suppressHydrationWarning>
-                <Header />
-                <main className="flex flex-col min-h-screen bg-base">{children}</main>
-                <Footer />
+            <body className="bg-base h-full" suppressHydrationWarning>
+                <div className="relative z-10 min-h-screen">
+                    <Header />
+                    <main className="flex flex-col min-h-screen">{children}</main>
+                    <Footer />
+                </div>
             </body>
         </html>
     );

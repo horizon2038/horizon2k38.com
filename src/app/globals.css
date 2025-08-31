@@ -26,7 +26,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
@@ -153,7 +152,7 @@
 
 html,
 body {
-  background: var(--background);
+  background: var(--color-base);
   color: var(--foreground);
   font-family: "Zen Kaku Gothic New", Hack, Arial, Helvetica, sans-serif;
   overflow-x: hidden;

@@ -68,7 +68,7 @@ export function Header() {
     const isActive = (href: string) => pathname === href;
 
     return (
-        <header className="bg-base backdrop-blur-md sticky top-0 z-50">
+        <header className="bg-bg-transparent backdrop-blur-md sticky top-0 z-50 bg-base/0">
             <nav className="container mx-auto px-6 grid grid-cols-2 items-center py-6">
                 <Link
                     href="/"
