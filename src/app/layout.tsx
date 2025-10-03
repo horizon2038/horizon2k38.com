@@ -25,6 +25,7 @@ export default function RootLayout({
                     title="horizon2k38 Blog RSS Feed"
                     href="/feed.xml"
                 />
+                <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
                 <meta name="format-detection" content="telephone=no" />
             </head>
             <body className="bg-base h-full" suppressHydrationWarning>

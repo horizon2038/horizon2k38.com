@@ -7,6 +7,8 @@ import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
 import rehypeHighlight from 'rehype-highlight';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 export const POSTS_PER_PAGE = 20;
 
@@ -52,8 +54,10 @@ export async function getPostData(slug: string): Promise<PostData> {
 
     const processedContent = await remark()
         .use(remarkRehype, {allowDangerousHtml: true})
+        .use(remarkMath)
         .use(rehypeRaw)
         .use(rehypeHighlight)
+        .use(rehypeKatex)
         .use(rehypeStringify, {allowDangerousHtml: true})
         .process(matterResult.content);
     const contentHtml = processedContent.toString();
