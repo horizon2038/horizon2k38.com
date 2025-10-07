@@ -89,6 +89,8 @@ export default function AboutPage() {
                     <li>X: <a href="https://x.com/horizon2k38">@horizon2k38</a></li>
                     <li>Mastodon: <a href="https://mstdn.jp/@horizon2k38">@horizon2k38@mstdn.jp</a></li>
                     <li>GitHub: <a href="https://github.com/horizon2038">@horizon2038</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/%E7%83%88%E7%81%AB-%E4%BC%8A%E7%B5%84-b73858369/">Rekka IGUMI</a></li>
+                    <li>Wantedly: <a href="https://www.wantedly.com/id/horizon2k38">@horizon2k38</a></li>
                 </ul>
             </div>
         </div>
