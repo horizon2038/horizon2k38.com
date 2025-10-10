@@ -28,7 +28,7 @@ export default function AboutPage() {
                     <li>Date of Birth: 2005-07-28</li>
                     <li>Residence: Tokyo, Japan </li>
                 </ul>
-                <h2>Afflications</h2>
+                <h2>Affiliations</h2>
                 <ul>
                     <li>2023-05 - 2023-11: Creator, <a href="https://jr.mitou.org/projects/2023/a9n">MITOU Jr Program</a></li>
                     <li>2024-06 - Present: Member, <a href="https://diver-x.jp/">Diver-X, Inc.</a></li>
