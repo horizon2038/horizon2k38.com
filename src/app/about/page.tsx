@@ -57,6 +57,11 @@ export default function AboutPage() {
                         </ul>
                     </li>
                 </ul>
+                <h2>Presentations</h2>
+                <ul>
+                    <li>2025-08-09: <a href="https://speakerdeck.com/horizon2038/boot-sequence-in-the-a9n-microkernel">Boot Sequence in the A9N Microkernel</a>, <a href="https://kernelvm.connpass.com/event/355100/">Kernel/VM探検隊@東京 No18</a></li>
+                    <li>2026-01-10: A9N: 高速なIPC機構を備えるマイクロカーネルの開発 (en: A9N: Development of a Microkernel with a High-Speed IPC Mechanism), <a href="https://prosym.org/67/">67th Programming Symposium</a></li>
+                </ul>
                 <h2>Skills</h2>
                 <ul>
                     <li>
