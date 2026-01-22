@@ -16,6 +16,46 @@ export type Project = {
 
 const projects: Project[] = [
   {
+    id: 'spencer',
+    title: 'SPENCER',
+    category: 'OS Development Kit',
+    shortDescription: 'OS Development Kit for A9N Microkernel',
+    longDescription: `
+SPENCER (System Provisioning Engine for Nun Components & Embedded Runtime) is a toolkit for building an OS on top of the A9N Microkernel.
+It allows for the easy creation of software that can run on bare metal.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PWWniI1d8qU?si=s81_fMDCCSKNAJx_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    `,
+    image: '/images/projects/spencer.png',
+    technologies: ['Rust'],
+    githubLink: 'https://github.com/horizon2038/spencer',
+    features: [
+      'OS Development Kit',
+      'Build System',
+    ],
+  },
+  {
+    id: 'j1t',
+    title: 'J1T',
+    category: 'AArch64 J1T Compiler',
+    shortDescription: 'JIT (Just-In-Time) Compiler with AArch64 Backend',
+    longDescription: `
+J1T is a Just-In-Time (JIT) compiler featuring an AArch64 backend.
+
+<figure width="560" height="315" style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/J2xT1mo5i3Q?si=TRyKV5JTuao5iTfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <figcaption>J1T executing a mandelbrot set calculation.</figcaption>
+</figure>
+    `,
+    image: '/images/projects/j1t.png',
+    technologies: ['C++23', 'AArch64 Assembly'],
+    githubLink: 'https://github.com/horizon2038/j1t',
+    features: [
+      'Just-In-Time Compilation',
+    ],
+  },
+  {
     id: 'project-horizon',
     title: 'Kernel of Horizon',
     year: 2025,
@@ -24,6 +64,7 @@ const projects: Project[] = [
     longDescription: `
 This is my personal portfolio website, built with Next.js and Tailwind CSS, and deployed on Cloudflare Pages.
     `,
+    image: '/images/projects/horizon2k38-com.png',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'MDX', 'Cloudflare Pages'],
     role: 'Frontend Development, UI/UX Design',
     githubLink: 'https://github.com/horizon2038/horizon2k38.com', // 実際のURLに置き換えてください
@@ -58,6 +99,7 @@ Additionally, this project was supported by the 2024 Mitou IT Program. The video
     image: '/images/projects/a9n-project.png',
     technologies: ['C++20', 'x86_64 Assembly'],
     githubLink: 'https://github.com/horizon2038/A9N',
+    demoLink: 'https://a9n-project.org',
     features: [
     ],
   },
