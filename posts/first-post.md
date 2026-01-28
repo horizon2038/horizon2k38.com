@@ -4,6 +4,8 @@ date: '2025-08-29T22:00'
 tags: ['introduction']
 ---
 
+## ToC
+
 ## Hello, World!
 
 Next.jsとTailwind CSSで個人サイトを一新した．
