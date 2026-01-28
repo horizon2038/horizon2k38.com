@@ -32,7 +32,7 @@ export default async function TagPage({params}: {params: Promise<{tag: string}>}
                 {posts.map(({slug, date, title}) => (
                     <div key={slug} className="neu-surface neu-pressable pb-4">
                         <Link href={`/blog/${slug}`} className="block no-underline text-text-default px-6 py-2">
-                            <h2 className="text-2xl font-semibold text-text-default">{title}</h2>
+                            <h2 className="text-2xl font-medium text-text-default">{title}</h2>
                             <small className="text-text-default/60 block mt-2">
                                 <time dateTime={date.toDateString()}>
                                     {format(date, 'yyyy-MM-dd HH:mm:ss')}

@@ -29,7 +29,7 @@ export default function BlogPage() {
                 {currentPosts.map(({slug, date, title, tags}) => (
                     <div key={slug} className="neu-surface neu-pressable pb-4">
                         <Link href={`/blog/${slug}`} className="block group no-underline text-text-default px-6 py-2">
-                            <h2 className="text-2xl font-semibold text-text-default">{title}</h2>
+                            <h2 className="text-2xl font-medium text-text-default">{title}</h2>
 
                             {tags && tags.length > 0 && (
                                 <div className="mt-3 mb-3 flex flex-wrap gap-2 overflow-hidden">
