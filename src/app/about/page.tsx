@@ -16,7 +16,7 @@ export default function AboutPage() {
                     className="neu-surface rounded-full mx-auto mb-6"
                 />
                 <div className="flex items-center justify-center text-center mb-6 gap-4 mx-auto">
-                    <a className="text-text-default" href="mailto:horizon@sfc.wide.ad.jp"><MailIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
+                    <a className="text-text-default" href="mailto:me@horizon2k38.com"><MailIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
                     <a className="text-text-default" href="https://github.com/horizon2038"><GitHubIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
                     <a className="text-text-default" href="https://x.com/horizon2k38"><XIcon className="neu-surface neu-pressable p-2 text-5xl" /></a>
                 </div>
@@ -35,8 +35,8 @@ export default function AboutPage() {
                     <li>2024-06 - 2025-03: Creator, <a href="https://www.ipa.go.jp/jinzai/mitou/it/2024/gaiyou-sg-2.html">MITOU IT Program</a></li>
                     <li>2024-07 - Present: Member, <a href="https://mitou.org/">MITOU Foundation</a></li>
                     <li>2025-04 - Present: Undergraduate Student, <a href="https://www.sfc.keio.ac.jp/">Faculty of Environment and Information Studies, Keio University</a></li>
-                    <li>2025-04 - Present: Member, <a href="https://rg.sfc.keio.ac.jp/">SFC-RG</a> VIRT/<a href="https://arch.sfc.wide.ad.jp/">Arch</a> (Kusumoto/Takashio/Van Meter/Uehara/Mitsugi/Nakazawa/Okoshi Joint Research Group)</li>
-                    <li>2025-12 - Present: Technical Staff, <a href="https://www.digiarc.aist.go.jp/team/ccirt/">Continuum Computing Infrastructure Research Team</a>, <a href="https://unit.aist.go.jp/ipri/">Intelligent Platform Research Institute (IPRI)</a>, <a href="https://www.aist.go.jp/">National Institute of Advanced Industrial Science and Technology (AIST)</a></li>
+                    <li>2025-04 - Present: Member, <a href="https://rg.sfc.keio.ac.jp/">SFC-RG</a> <a href="https://virt.sfc.wide.ad.jp">VIRT</a>/<a href="https://arch.sfc.wide.ad.jp/">Arch</a> (Kusumoto/Takashio/Van Meter/Uehara/Mitsugi/Nakazawa/Okoshi Joint Research Group)</li>
+                    <li>2025-12 - Present: Technical Staff, <a href="https://www.ipri.aist.go.jp/ccarg/index.html">Continuum Computing Architecture Research Group</a>, <a href="https://unit.aist.go.jp/ipri/">Intelligent Platform Research Institute (IPRI)</a>, <a href="https://www.aist.go.jp/">National Institute of Advanced Industrial Science and Technology (AIST)</a></li>
                 </ul>
                 <h2>Certificate</h2>
                 <ul>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 </ul>
                 <h2>Contacts</h2>
                 <ul>
-                    <li>Email: <a href="mailto:horizon@sfc.wide.ad.jp">horizon@sfc.wide.ad.jp</a></li>
+                    <li>Email: <a href="mailto:me@horizon2k38.com">me@horizon2k38.com</a></li>
                     <li>X: <a href="https://x.com/horizon2k38">@horizon2k38</a></li>
                     <li>Mastodon: <a href="https://mstdn.jp/@horizon2k38">@horizon2k38@mstdn.jp</a></li>
                     <li>GitHub: <a href="https://github.com/horizon2038">@horizon2038</a></li>
