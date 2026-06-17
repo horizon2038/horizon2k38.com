@@ -37,6 +37,7 @@ export default function AboutPage() {
                     <li>2025-04 - Present: Undergraduate Student, <a href="https://www.sfc.keio.ac.jp/">Faculty of Environment and Information Studies, Keio University</a></li>
                     <li>2025-04 - Present: Member, <a href="https://rg.sfc.keio.ac.jp/">SFC-RG</a> <a href="https://virt.sfc.wide.ad.jp">VIRT</a>/<a href="https://arch.sfc.wide.ad.jp/">Arch</a> (Kusumoto/Takashio/Van Meter/Uehara/Mitsugi/Nakazawa/Okoshi Joint Research Group)</li>
                     <li>2025-12 - Present: Technical Staff, <a href="https://www.ipri.aist.go.jp/ccarg/index.html">Continuum Computing Architecture Research Group</a>, <a href="https://unit.aist.go.jp/ipri/">Intelligent Platform Research Institute (IPRI)</a>, <a href="https://www.aist.go.jp/">National Institute of Advanced Industrial Science and Technology (AIST)</a></li>
+                    <li>2026-06 - Present: 10th Cohort, <a href="https://masason-foundation.org/">Masason Foundation</a></li>
                 </ul>
                 <h2>Certificate</h2>
                 <ul>
