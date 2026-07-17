@@ -1,0 +1,10 @@
+Third-party notices
+
+GNU Unifont 17.0.05
+
+This repository includes GNU Unifont for the otaku/archivement-generator
+canvas renderer.
+
+File: public/fonts/unifont-17.0.05.otf
+Source: https://ftp.gnu.org/gnu/unifont/unifont-17.0.05/
+License: SIL Open Font License 1.1
