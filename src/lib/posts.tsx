@@ -11,6 +11,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
+import remarkGfm from 'remark-gfm';
 
 export const POSTS_PER_PAGE = 20;
 
@@ -56,6 +57,7 @@ export async function getPostData(slug: string): Promise<PostData> {
 
     const processedContent = await remark()
         .use(remarkToc, {heading: 'ToC', maxDepth: 3})
+        .use(remarkGfm)
         .use(remarkMath)
         .use(remarkRehype, {allowDangerousHtml: true})
         .use(rehypeSlug)
