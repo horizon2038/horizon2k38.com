@@ -60,9 +60,15 @@ function drawText(
 }
 
 async function loadCanvasFont() {
-    if ("fonts" in document) {
+    if (!("fonts" in document)) {
+        return;
+    }
+
+    try {
         await document.fonts.load("28px \"GNU Unifont\"");
         await document.fonts.ready;
+    } catch {
+        // Keep the static export usable even if the font asset fails to load.
     }
 }
 
@@ -117,7 +123,11 @@ export function ArchivementGenerator() {
         drawText(ctx, currentType.label, 124, 28, textSize, currentType.color);
         drawText(ctx, title || "実績名", 124, 68, textSize, "#ffffff");
 
-        setDownloadUrl(canvas.toDataURL("image/png"));
+        try {
+            setDownloadUrl(canvas.toDataURL("image/png"));
+        } catch {
+            setDownloadUrl("");
+        }
     }, [progressType, title]);
 
     useEffect(() => {
@@ -194,8 +204,9 @@ export function ArchivementGenerator() {
 
                 <a
                     href={downloadUrl}
-                    download="minecraft-archivement.png"
-                    className="neu-surface neu-pressable rounded-md px-4 py-3 text-center text-sm font-semibold text-text-default no-underline"
+                    download="archivement.png"
+                    aria-disabled={!downloadUrl}
+                    className="neu-surface neu-pressable rounded-md px-4 py-3 text-center text-sm font-semibold text-text-default no-underline aria-disabled:pointer-events-none aria-disabled:opacity-50"
                 >
                     Download PNG
                 </a>
