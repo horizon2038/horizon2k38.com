@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: dark;
   --background: #141414;
-  --foreground: #171717;
+  --foreground: #ededed;
 }
 
 @theme {
@@ -22,12 +23,6 @@
   --neu-shadow-rgb: 0 0 0;
   --neu-radius: 0.75rem;
   --ease-soft: cubic-bezier(0.2, 0.6, 0.2, 1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #ededed;
-  }
 }
 
 @layer components {
