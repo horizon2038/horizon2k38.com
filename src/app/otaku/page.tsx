@@ -2,9 +2,10 @@ import Link from "next/link";
 
 const pages = [
     {
-        href: "/otaku/archivement-generator",
-        title: "Archivement Generator",
-        description: "Generate achievements in the style of popular games",
+        href: "/otaku/",
+        title: "The iDOLM@STER: Soul Songs",
+        // description: "A personal selection of songs from The iDOLM@STER series",
+        description: "準備中",
     },
 ];
 

@@ -12,6 +12,7 @@ const navLinks = [
     {href: '/about', label: 'About'},
     {href: '/projects', label: 'Projects'},
     {href: '/blog', label: 'Blog'},
+    {href: '/tools', label: 'Tools'},
     {href: '/otaku', label: 'Otaku'},
 ];
 
@@ -65,7 +66,7 @@ export function Header() {
         };
     }, [open]);
 
-    const isActive = (href: string) => pathname === href;
+    const isActive = (href: string) => pathname === href || (href !== '/' && pathname.startsWith(`${href}/`));
 
     return (
         <header className="bg-bg-transparent backdrop-blur-md sticky top-0 z-50 bg-base/0">
@@ -190,4 +191,3 @@ export function Header() {
         </header>
     );
 }
-
