@@ -58,6 +58,10 @@ export default function AboutPage() {
                         </ul>
                     </li>
                 </ul>
+                <h2>Publications</h2>
+                <ul>
+                    <li>2026-09-17: <a href="https://ipsj.ixsq.nii.ac.jp/records/2012038">コンパイラの静的最適化によるアーキテクチャ非依存なIPC最適化 (en: Architecture-Agnostic IPC Optimization via Compiler-Driven Static Path Specialization)</a>, <a href="https://sigos.ipsj.or.jp/event/sigos2026-09/">173rd IPSJ Research Meeting on System Software and Operating Systems (SIGOS)</a></li>
+                </ul>
                 <h2>Presentations</h2>
                 <ul>
                     <li>2025-08-09: <a href="https://speakerdeck.com/horizon2038/boot-sequence-in-the-a9n-microkernel">Boot Sequence in the A9N Microkernel</a>, <a href="https://kernelvm.connpass.com/event/355100/">Kernel/VM探検隊@東京 No18</a></li>
