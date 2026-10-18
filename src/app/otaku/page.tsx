@@ -2,6 +2,11 @@ import Link from "next/link";
 
 const pages = [
     {
+        href: "/otaku/event-ranking/",
+        title: "イベラン",
+        description: "イベント参加記録",
+    },
+    {
         href: "/otaku/",
         title: "The iDOLM@STER: Soul Songs",
         // description: "A personal selection of songs from The iDOLM@STER series",
